@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="message">Ответь на вопрос</div>
     <div class="container">
         <div class="q-img">
             <img src="./img/5q.webp" alt="question">
@@ -74,7 +75,10 @@
                         location.href = './index6.html';
                     }
                 } else {
-                    alert('Ответь на вопрос');
+                     document.querySelector('.message').style.display = 'block';
+                    setTimeout(() => {
+                        document.querySelector('.message').style.display = 'none';
+                    }, 2000);
                 }
             });
         });
@@ -83,3 +87,4 @@
 </body>
 
 </html>
+
