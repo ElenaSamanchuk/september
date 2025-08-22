@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="q-img">
+            <img src="./img/2q.webp" alt="question">
+        </div>
+        <div class="q-content">
+            <div class="q-text">
+                <p class="q-h1">Реши задачу:</p>
+                <p class="q-h2">В ПриЕме 3 — три блюда на каждый день. Сколько разных блюд привезёт курьер, если заказать ПриЕм 3 на 25 дней?</p>
+            </div>
+            <div class="q-container">
+                <label class="q-question"><input type="radio" name="options" id="2.1"><span>65</span></label>
+                <label class="q-question"><input type="radio" name="options" id="2.2"><span>70</span></label>
+                <label class="q-question"><input type="radio" name="options" id="2.3"><span>75</span></label>
+            </div>
+            <div class="q-bottom">
+                <div class="q-range">
+                    <span>2 из 5</span>
+                    <progress value="0.4"></progress>
+                </div>
+                <div class="q-btn">Сдать листочек</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function getSelectedRadioId() {
+                const selectedRadio = document.querySelector('input[name="options"]:checked');
+                return selectedRadio ? selectedRadio.id : null;
+            }
+            document.querySelector('.q-btn').addEventListener('click', () => {
+                const selectedId = getSelectedRadioId();
+                if (selectedId) {
+                    localStorage.setItem('2', selectedId);
+                    console.log(localStorage.getItem('1'));
+                    console.log(localStorage.getItem('2'));
+                    location.href = './index3.html';
+                } else {
+                    alert('Ответь на вопрос');
+                }
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

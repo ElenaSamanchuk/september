@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="q-img">
+            <img src="./img/5q.webp" alt="question">
+        </div>
+        <div class="q-content">
+            <div class="q-text">
+                <p class="q-h1">Ответь на вопрос со звёздочкой:</p>
+                <p class="q-h2">Пу-пу-пуу… Последний урок — физра. Как поступишь?</p>
+            </div>
+            <div class="q-container">
+                <label class="q-question"><input type="radio" name="options" id="5.1" class="first"><span>Уйду домой, а по пути зайду в любимый магазинчик за чипсами.</span></label>
+                <label class="q-question"><input type="radio" name="options" id="5.2" class="second"><span>Посижу в столовке и подожду друзей с урока.</span></label>
+                <label class="q-question"><input type="radio" name="options" id="5.3" class="third"><span>Поставлю рекорд класса по прыжкам в длину!</span></label>
+            </div>
+            <div class="q-bottom">
+                <div class="q-range">
+                    <span>5 из 5</span>
+                    <progress value="1"></progress>
+                </div>
+                <div class="q-btn">Узнать результат</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function getSelectedRadioId() {
+                const selectedRadio = document.querySelector('input[name="options"]:checked');
+                return selectedRadio ? selectedRadio.id : null;
+            }
+            document.querySelector('.q-btn').addEventListener('click', () => {
+                const selectedId = getSelectedRadioId();
+                if (selectedId) {
+                    localStorage.setItem('5', selectedId);
+                    console.log(localStorage.getItem('1'));
+                    console.log(localStorage.getItem('2'));
+                    console.log(localStorage.getItem('3'));
+                    console.log(localStorage.getItem('4'));
+                    console.log(localStorage.getItem('5'));
+                    let count = 0;
+                    if (localStorage.getItem('1') == 1.3) {
+                        count++;
+                    }
+                    if (localStorage.getItem('2') == 2.2) {
+                        count++;
+                    }
+                    if (localStorage.getItem('3') == 3.3) {
+                        count++;
+                    }
+                    if (localStorage.getItem('4') == 4.1) {
+                        count++;
+                    }
+                    if (localStorage.getItem('5') == 5.2) {
+                        count++;
+                    }
+                    if (count==0 || count==1) {
+                        location.href = './index9.html';
+                    }
+                    if (count==2 || count==3) {
+                        location.href = './index8.html';
+                    }
+                    if (count==4) {
+                        location.href = './index7.html';
+                    }
+                    if (count==5) {
+                        location.href = './index6.html';
+                    }
+                } else {
+                    alert('Ответь на вопрос');
+                }
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

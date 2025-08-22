@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="q-img">
+            <img src="./img/1q.webp" alt="question">
+        </div>
+        <div class="q-content">
+            <div class="q-text">
+                <p class="q-h1">Ответь на вопрос:</p>
+                <p class="q-h2">Как правильно пишется название нашего сервиса?</p>
+            </div>
+            <div class="q-container">
+                <label class="q-question"><input type="radio" name="options" id="1.1"><span>ПриЁм</span></label>
+                <label class="q-question"><input type="radio" name="options" id="1.2"><span>ПриЕм</span></label>
+                <label class="q-question"><input type="radio" name="options" id="1.3"><span>Прием</span></label>
+            </div>
+            <div class="q-bottom">
+                <div class="q-range">
+                    <span>1 из 5</span>
+                    <progress value="0.2"></progress>
+                </div>
+                <div class="q-btn">Следующий урок</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function getSelectedRadioId() {
+                const selectedRadio = document.querySelector('input[name="options"]:checked');
+                return selectedRadio ? selectedRadio.id : null;
+            }
+            document.querySelector('.q-btn').addEventListener('click', () => {
+                const selectedId = getSelectedRadioId();
+                if (selectedId) {
+                    localStorage.setItem('1', selectedId);
+                    console.log(localStorage.getItem('1'));
+                    location.href = './index2.html';
+                } else {
+                    alert('Ответь на вопрос');
+                }
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

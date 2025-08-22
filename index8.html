@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="a-img">
+            <img src="./img/3a.webp" alt="question">
+        </div>
+        <div class="a-content">
+            <div class="a-text">
+                <p class="a-h1">2-3 правильных ответа:</p>
+                <p class="a-h2">Неплохо, но пока больше тройки поставить не можем 🙄</p>
+                <p class="a-h2">Хочешь улучшить оценку? Вот твоя домашка.</p>
+                <p class="a-h2">
+                    <ul>
+                        <li>Если живёшь с близкими, попробуй ПриЕм для двоих. Курьер будет привозить два набора еды на один адрес, а вы — экономить.</li>
+                        <li>Отправь тест друзьям и сравните свои оценки. Может, кто-то получит пять?</li>
+                        <li>Пройди тест снова и попробуй правильно ответить на все вопросы. Когда-то точно должно получиться!</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="a-bottom">
+                <a href="https://priem.menu/?cmz=RaWY#menu-plans-v2" target="_top" class="a-btn">Посмотреть</a>
+                <a href="https://t.me/share/url?url=Моя оценка в школе ПриЕма сегодня — тройка. Проверь себя и напиши, что тебе поставят 🙂 https://priem.menu/?cmz=RaWY" class="a-btn">Поделиться в Телеграм</a>
+                <a href="./index.html" class="a-btn">Пройти занаво</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function getSelectedRadioId() {
+                const selectedRadio = document.querySelector('input[name="options"]:checked');
+                return selectedRadio ? selectedRadio.id : null;
+            }
+            document.querySelector('[data-copy-text]').addEventListener('click', () => {
+                document.querySelector('[data-copy-text]').style.cursor = 'pointer';
+                navigator.clipboard.writeText(document.querySelector('[data-copy-text]').getAttribute('data-copy-text'));
+                alert('Промокод скопирован');
+            });
+        });
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
