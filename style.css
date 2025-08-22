@@ -567,6 +567,7 @@ input[type="radio"]:checked::before {
 
 .prom {
     color: #FF1A6C;
+    cursor: pointer;
 }
 
 ul {
@@ -579,4 +580,5 @@ ul {
 
 li {
     margin-bottom: .5vw;
+
 }
