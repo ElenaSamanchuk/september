@@ -413,7 +413,7 @@ input[type="radio"]:checked::before {
         width: 3.4vw !important;
     }
     .third {
-        width: 3.2vw !important;
+        width: 3.3vw !important;
     }
 }
 
@@ -605,6 +605,7 @@ li {
     margin-bottom: .5vw;
 
 }
+
 
 
 
