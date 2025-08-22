@@ -572,6 +572,7 @@ input[type="radio"]:checked::before {
         padding: 3.5vw 6vw;
         border-radius: 1vw;
         text-transform: none;
+        margin-bottom: 1vw;
     }
 
     ul {
@@ -606,6 +607,7 @@ li {
     margin-bottom: .5vw;
 
 }
+
 
 
 
