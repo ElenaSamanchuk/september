@@ -623,12 +623,13 @@ li {
 }
 
 @media (hover: none) {
-    .a-btn:hover,
-    .q-btn:hover {
+    .a-btn:active,
+    .q-btn:active {
         transform: none;
         scale: 1 !important;
     }
 }
+
 
 
 
