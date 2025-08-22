@@ -251,6 +251,24 @@ input[type="radio"]:checked::before {
     border-radius: 50%;
 }
 
+.message {
+    font-family: 'MuseoSansCyrl-500', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    position: fixed;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, .8);
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    z-index: 10;
+    display: none;
+}
+
 @media (max-width: 960px) {
     .container {
         width: 80vw;
@@ -563,6 +581,12 @@ input[type="radio"]:checked::before {
     li {
         margin-bottom: .5vw;
     }
+    .message {
+        font-size: 3vw;
+        top: 5vw;
+        padding: 2vw 5vw;
+        border-radius: 1vw;
+    }
 }
 
 .prom {
@@ -582,3 +606,4 @@ li {
     margin-bottom: .5vw;
 
 }
+
