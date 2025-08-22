@@ -622,6 +622,13 @@ li {
     }
 }
 
+@media (hover: none) {
+    .a-btn:hover,
+    .q-btn:hover {
+        transform: none;
+        scale: 1 !important;
+    }
+}
 
 
 
