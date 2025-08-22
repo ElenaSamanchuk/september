@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="message">Ответь на вопрос</div>
     <div class="container">
         <div class="q-img">
             <img src="./img/3q.webp" alt="question">
@@ -45,7 +46,10 @@
                     console.log(localStorage.getItem('3'));
                     location.href = './index4.html';
                 } else {
-                    alert('Ответь на вопрос');
+                     document.querySelector('.message').style.display = 'block';
+                    setTimeout(() => {
+                        document.querySelector('.message').style.display = 'none';
+                    }, 2000);
                 }
             });
         });
@@ -54,3 +58,4 @@
 </body>
 
 </html>
+
