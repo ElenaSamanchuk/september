@@ -416,6 +416,9 @@ input[type="radio"]:checked::before {
     .third {
         width: 3.3vw !important;
     }
+    .q-bottom .q-btn:hover {
+        transform: none;
+    }
 }
 
 .a-img {
@@ -588,6 +591,9 @@ input[type="radio"]:checked::before {
         padding: 2vw 5vw;
         border-radius: 1vw;
     }
+    .a-bottom .a-btn:hover {
+        transform: none;
+    }
 }
 
 .prom {
@@ -614,6 +620,7 @@ li {
         transform: none;
     }
 }
+
 
 
 
