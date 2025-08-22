@@ -30,16 +30,12 @@
                 const selectedRadio = document.querySelector('input[name="options"]:checked');
                 return selectedRadio ? selectedRadio.id : null;
             }
-            document.querySelector('[data-copy-text]').addEventListener('click', () => {
-                document.querySelector('[data-copy-text]').style.cursor = 'pointer';
-                navigator.clipboard.writeText(document.querySelector('[data-copy-text]').getAttribute('data-copy-text'));
-                alert('Промокод скопирован');
-            });
         });
     </script>
     <script src="./script.js"></script>
 </body>
 
 </html>
+
 
 
