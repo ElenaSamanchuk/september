@@ -385,6 +385,7 @@ input[type="radio"]:checked::before {
     }
 
     .q-bottom .q-btn {
+        width: 80%;
         font-size: 4vw;
         padding: 3.5vw 6vw;
         border-radius: 1vw;
@@ -605,6 +606,7 @@ li {
     margin-bottom: .5vw;
 
 }
+
 
 
 
