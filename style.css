@@ -614,12 +614,14 @@ li {
 
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (hover: hover) {
     .a-btn:hover,
     .q-btn:hover {
         transform: none;
+        scale: 1;
     }
 }
+
 
 
 
