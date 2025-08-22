@@ -618,9 +618,10 @@ li {
     .a-btn:hover,
     .q-btn:hover {
         transform: none;
-        scale: 1;
+        scale: 1 !important;
     }
 }
+
 
 
 
