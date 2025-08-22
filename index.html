@@ -41,7 +41,6 @@
                 const selectedId = getSelectedRadioId();
                 if (selectedId) {
                     localStorage.setItem('1', selectedId);
-                    console.log(localStorage.getItem('1'));
                     location.href = './index2.html';
                 } else {
                     document.querySelector('.message').style.display = 'block';
@@ -56,4 +55,5 @@
 </body>
 
 </html>
+
 
