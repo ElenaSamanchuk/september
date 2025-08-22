@@ -407,10 +407,10 @@ input[type="radio"]:checked::before {
     }
 
     .first {
-        width: 4.5vw !important;
+        width: 4.6vw !important;
     }
     .second {
-        width: 3.5vw !important;
+        width: 3.4vw !important;
     }
     .third {
         width: 3.2vw !important;
@@ -583,7 +583,6 @@ input[type="radio"]:checked::before {
     }
     .message {
         font-size: 3vw;
-        top: 5vw;
         padding: 2vw 5vw;
         border-radius: 1vw;
     }
@@ -606,5 +605,6 @@ li {
     margin-bottom: .5vw;
 
 }
+
 
 
