@@ -32,7 +32,13 @@
             }
             document.querySelector('[data-copy-text]').addEventListener('click', () => {
                 document.querySelector('[data-copy-text]').style.cursor = 'pointer';
-                navigator.clipboard.writeText(document.querySelector('[data-copy-text]').getAttribute('data-copy-text'));
+                //navigator.clipboard.writeText(document.querySelector('[data-copy-text]').getAttribute('data-copy-text'));
+                const textArea = document.createElement('textarea');
+                textArea.value = 'ОТЛИЧНИК';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
                 alert('Промокод скопирован');
             });
         });
@@ -41,3 +47,4 @@
 </body>
 
 </html>
+
