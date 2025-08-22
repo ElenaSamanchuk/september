@@ -559,7 +559,7 @@ input[type="radio"]:checked::before {
 
     .a-bottom {
         width: 100%;
-        height: 30%;
+        height: 35%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -606,6 +606,13 @@ ul {
 li {
     margin-bottom: .5vw;
 
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .a-btn:hover,
+    .q-btn:hover {
+        transform: none;
+    }
 }
 
 
